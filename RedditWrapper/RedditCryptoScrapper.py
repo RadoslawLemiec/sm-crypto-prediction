@@ -6,12 +6,6 @@ from praw.models import Comment
 considered_subreddits = ['crypto_data', 'Bitcoin', 'litecoin', 'btc', 'Cryptocurrency',
                          'CryptoMarkets', 'ethereum']
 
-reddit = praw.Reddit(client_id='niEeEjiqEMilzg',
-                     client_secret='hi2pHt9T1cjiKD_FFYfL8OdkGZ8',
-                     password='Lemur24',
-                     user_agent='testscript by /u/Jumanchi',
-                     username='Jumanchi')
-
 print(reddit.user.me())
 submissions_per_subreddit = [reddit.subreddit(subreddit).top(limit=None) for subreddit in considered_subreddits]
 
